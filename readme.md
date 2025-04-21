@@ -60,37 +60,37 @@ All endpoints require authentication via token. Include the token in the request
 
 | Method | Endpoint | Authentication | Parameters | Description |
 |--------|----------|----------------|------------|-------------|
-| POST | `/import` | Required | NA | Import data from dump/product.csv |
-| POST | `/import/upload` | Required | file: input[type=file] | Upload and import data from custom file |
+| POST | `/api/import` | Required | NA | Import data from dump/product.csv |
+| POST | `/api/import/upload` | Required | file: input[type=file] | Upload and import data from custom file |
 
 ### Revenue Analysis
 | Method | Endpoint | Authentication | Parameters | Description |
 |--------|----------|----------------|------------|-------------|
-| GET | `/analysis/revenue/total` | Required | `startDate`, `endDate` | Get total revenue for the specified period |
-| GET | `/analysis/revenue/products` | Required | `startDate`, `endDate`, `productId` | Get revenue breakdown by products |
-| GET | `/analysis/revenue/categories` | Required | `startDate`, `endDate`, `categoryId` | Get revenue breakdown by categories |
-| GET | `/analysis/revenue/regions` | Required | `startDate`, `endDate`, `regionId` | Get revenue breakdown by regions |
+| GET | `/api/analysis/revenue/total` | Required | `startDate`, `endDate` | Get total revenue for the specified period |
+| GET | `/api/analysis/revenue/products` | Required | `startDate`, `endDate`, `productId` | Get revenue breakdown by products |
+| GET | `/api/analysis/revenue/categories` | Required | `startDate`, `endDate`, `categoryId` | Get revenue breakdown by categories |
+| GET | `/api/analysis/revenue/regions` | Required | `startDate`, `endDate`, `regionId` | Get revenue breakdown by regions |
 
 ### Product Analysis
 | Method | Endpoint | Authentication | Parameters | Description |
 |--------|----------|----------------|------------|-------------|
-| GET | `/analysis/products/top` | Required | `startDate`, `endDate` | Get top performing products |
-| GET | `/analysis/products/top/category` | Required | `startDate`, `endDate`, `categoryId` | Get top products by category |
-| GET | `/analysis/products/top/region` | Required | `startDate`, `endDate`, `regionId` | Get top products by region |
+| GET | `/api/analysis/products/top` | Required | `startDate`, `endDate` | Get top performing products |
+| GET | `/api/analysis/products/top/category` | Required | `startDate`, `endDate`, `categoryId` | Get top products by category |
+| GET | `/api/analysis/products/top/region` | Required | `startDate`, `endDate`, `regionId` | Get top products by region |
 
 ### Customer & Order Analysis
 | Method | Endpoint | Authentication | Parameters | Description |
 |--------|----------|----------------|------------|-------------|
-| GET | `/analysis/customers/count` | Required | `startDate`, `endDate` | Get total customer count |
-| GET | `/analysis/orders/count` | Required | `startDate`, `endDate` | Get total order count |
-| GET | `/analysis/orders/average-value` | Required | `startDate`, `endDate` | Get average order value |
+| GET | `/api/analysis/customers/count` | Required | `startDate`, `endDate` | Get total customer count |
+| GET | `/api/analysis/orders/count` | Required | `startDate`, `endDate` | Get total order count |
+| GET | `/api/analysis/orders/average-value` | Required | `startDate`, `endDate` | Get average order value |
 
 ### Business Metrics
 | Method | Endpoint | Authentication | Parameters | Description |
 |--------|----------|----------------|------------|-------------|
-| GET | `/analysis/profit-margin` | Required | `startDate`, `endDate` | Get profit margin analysis |
-| GET | `/analysis/customer-lifetime-value` | Required | `startDate`, `endDate` | Get customer lifetime value analysis |
-| GET | `/analysis/customer-segmentation` | Required | `startDate`, `endDate` | Get customer segmentation analysis |
+| GET | `/api/analysis/profit-margin` | Required | `startDate`, `endDate` | Get profit margin analysis |
+| GET | `/api/analysis/customer-lifetime-value` | Required | `startDate`, `endDate` | Get customer lifetime value analysis |
+| GET | `/api/analysis/customer-segmentation` | Required | `startDate`, `endDate` | Get customer segmentation analysis |
 
 ## Parameters
 - `startDate`: Start date for the analysis period (format: YYYY-MM-DD)
