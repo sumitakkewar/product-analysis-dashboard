@@ -1,0 +1,600 @@
+{
+	"info": {
+		"_postman_id": "5e587883-c158-4ed3-a310-2c45a0314727",
+		"name": "Product Analysis Dashboard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1155354"
+	},
+	"item": [
+		{
+			"name": "Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/sumitakkewar/Projects/Assignments/Product Dashboard/dump/large_product.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/import/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"import",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total Revenue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/analysis/revenue/total?endDate=2024-04-22&startDate=2024-02-28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analysis",
+						"revenue",
+						"total"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2024-04-22"
+						},
+						{
+							"key": "startDate",
+							"value": "2024-02-28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Revenue By Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/analysis/revenue/products?endDate=2024-04-22&startDate=2024-02-28&productId=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analysis",
+						"revenue",
+						"products"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2024-04-22"
+						},
+						{
+							"key": "startDate",
+							"value": "2024-02-28"
+						},
+						{
+							"key": "productId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Revenue By Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/analysis/revenue/categories?endDate=2025-04-21&startDate=2021-01-01&categoryId=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analysis",
+						"revenue",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2025-04-21"
+						},
+						{
+							"key": "startDate",
+							"value": "2021-01-01"
+						},
+						{
+							"key": "categoryId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Revenue By Region",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/analysis/revenue/regions?endDate=2025-04-22&startDate=2021-01-01&regionId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analysis",
+						"revenue",
+						"regions"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2025-04-22"
+						},
+						{
+							"key": "startDate",
+							"value": "2021-01-01"
+						},
+						{
+							"key": "regionId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/analysis/products/top?endDate=2025-04-22&startDate=2021-01-01&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analysis",
+						"products",
+						"top"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2025-04-22"
+						},
+						{
+							"key": "startDate",
+							"value": "2021-01-01"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top Product By Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/analysis/products/top/category?endDate=2025-04-22&startDate=2021-01-01&limit=3&categoryId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analysis",
+						"products",
+						"top",
+						"category"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2025-04-22"
+						},
+						{
+							"key": "startDate",
+							"value": "2021-01-01"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "categoryId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top Product By Region",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/analysis/products/top/region?endDate=2025-04-22&startDate=2021-01-01&limit=2&regionId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analysis",
+						"products",
+						"top",
+						"region"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2025-04-22"
+						},
+						{
+							"key": "startDate",
+							"value": "2021-01-01"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "regionId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/analysis/customers/count?endDate=2025-04-22&startDate=2024-04-22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analysis",
+						"customers",
+						"count"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2025-04-22"
+						},
+						{
+							"key": "startDate",
+							"value": "2024-04-22"
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "regionId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/analysis/orders/count?endDate=2025-04-22&startDate=2024-05-18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analysis",
+						"orders",
+						"count"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2025-04-22"
+						},
+						{
+							"key": "startDate",
+							"value": "2024-05-18"
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "regionId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Average Order Value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/analysis/orders/average-value?endDate=2025-04-22&startDate=2024-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analysis",
+						"orders",
+						"average-value"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2025-04-22"
+						},
+						{
+							"key": "startDate",
+							"value": "2024-01-01"
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "regionId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profit Margin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/analysis/profit-margin?endDate=2025-04-22&startDate=2024-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analysis",
+						"profit-margin"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2025-04-22"
+						},
+						{
+							"key": "startDate",
+							"value": "2024-01-01"
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "regionId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Life Time Value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/analysis/customer-lifetime-value?endDate=2025-04-22&startDate=2021-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analysis",
+						"customer-lifetime-value"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2025-04-22"
+						},
+						{
+							"key": "startDate",
+							"value": "2021-01-01"
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "regionId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Segmentation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/analysis/customer-segmentation?endDate=2025-04-22&startDate=2021-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"analysis",
+						"customer-segmentation"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2025-04-22"
+						},
+						{
+							"key": "startDate",
+							"value": "2021-01-01"
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "regionId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/import",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"import"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJ0aW1lc3RhbXAiOiIyMDI1LTA0LTIxVDE5OjE0OjQ1LjIxMloiLCJpYXQiOjE3NDUyNjI4ODUsImV4cCI6MTc0NTI2NjQ4NX0.RfKfAXGWOcrSb4bZI_u4bAU5ifQ7UfVUD-QNmFfS6nA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
