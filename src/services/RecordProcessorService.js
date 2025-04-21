@@ -2,7 +2,12 @@ import { Customer, Product, Category, Region, PaymentMethod, Order } from '../mo
 
 class RecordProcessorService {
   validateRecord(record) {
-    if (!record['Customer ID'] || !record['Product ID'] || !record['Order ID']) {
+
+    const validCheck = [
+      'Customer ID', 'Product ID', 'Order ID', 'Product Name','Category','Region','Date of Sale','Quantity Sold','Unit Price','Discount','Shipping Cost','Payment Method','Customer Name','Customer Email','Customer Address'
+    ]
+
+    if (!validCheck.every(item => !!record[item])) {
       throw new Error('Missing required fields');
     }
   }

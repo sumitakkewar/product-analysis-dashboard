@@ -60,8 +60,8 @@ All endpoints require authentication via token. Include the token in the request
 
 | Method | Endpoint | Authentication | Parameters | Description |
 |--------|----------|----------------|------------|-------------|
-| POST | `/import` | Required | `startDate`, `endDate` | Import data for the specified date range |
-| POST | `/import/upload` | Required | `startDate`, `endDate` | Upload and import data for the specified date range |
+| POST | `/import` | Required | NA | Import data from dump/product.csv |
+| POST | `/import/upload` | Required | file: input[type=file] | Upload and import data from custom file |
 
 ### Revenue Analysis
 | Method | Endpoint | Authentication | Parameters | Description |
