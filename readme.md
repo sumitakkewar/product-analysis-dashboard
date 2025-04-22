@@ -55,6 +55,11 @@ This document provides detailed information about the available API endpoints fo
 
 ## Authentication
 All endpoints require authentication via token. Include the token in the request headers.
+To get the token use
+```bash
+npm run generate-token
+```
+which will gove you a token for the authentication.
 
 ## Endpoints
 
